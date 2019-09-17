@@ -27,14 +27,15 @@
           img(src="~assets/img/call.svg", alt="")
         .calc
           img(src="~assets/img/top/calc.png", alt="")
-    nav leftmenu
+    nav
+        LeftMenu
     main
       nuxt
   //- #top
     .logo
       a(href='/')
         img(src="~assets/img/logo3.svg")
-        
+
     .search
       a(href='#').mbutton.grey.small Найти
       .bginput
@@ -71,20 +72,26 @@
                   .h
                     img(src="/images/top/" + item.ico[1], alt="")
                   .title #{item.title}
-    
+
 </template>
 
 <script>
+import LeftMenu from '../components/LeftMenu/component.vue'
 export default {
   components: {
-
+    LeftMenu
   }
 }
 </script>
 
 <style lang="scss">
-
-
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+        text-decoration: none;
+    }
 a.mbutton {
     font-family: 'MontserratSemiBold';
     font-size: 14px;
@@ -178,7 +185,7 @@ input, textarea {
                 background: -o-linear-gradient(360deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.2) 100%); /* opera 11.10+ */
                 background: -ms-linear-gradient(360deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.2) 100%); /* ie10+ */
                 background: linear-gradient(90deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.2) 100%); /* w3c */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */            
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#FFFFFF',GradientType=1 ); /* ie6-9 */
             }
         }
         &.grey {
@@ -305,7 +312,7 @@ header {
                                 @media (max-width: 575px) {
                                     left: 0px;
                                 }
-                            }        
+                            }
                         }
                     }
                 }
@@ -363,7 +370,7 @@ header {
                             padding: 0 20px 0 10px;
                             font-family: 'MontserratMedium';
                             color: #353535;
-                            font-size: 14px;                            
+                            font-size: 14px;
                         }
                         .b {
                             flex-grow: 0;
@@ -391,7 +398,7 @@ header {
                         background-color: #ededed;
                         .title {
                             color: #2d70e4;
-                        }                        
+                        }
                         .b {
                             display: none;
                         }

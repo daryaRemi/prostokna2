@@ -24,9 +24,10 @@
         p Кор/с 30101810400000000225
         p БИК 044525205
     form.contact__form
-      //- .form__img 
+      Footer
+      //- .form__img
         //- img(src='/assets/img/contact/Keyboard.svg')
-      //- .form__name 
+      //- .form__name
         //- input(name="name" placeholder='ИМЯ *')
       //- .form__area
         //- textarea(name="message" placeholder='СООБЩЕНИЕ')
@@ -36,13 +37,16 @@
         //- input(name="tel" placeholder='ТЕЛЕФОН *')
       //- .form__button
         //- button отправить
-      
+
 
 </template>
-
 <script>
 // import $ from 'jquery'
+import Footer from '~/components/Footer/component.vue'
 export default {
+  components: {
+    Footer
+  },
   mounted () {
     var script = document.createElement('script')
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCt8zCnAdWM57-hf6vndvzWZ0UKDPc2yxE&callback=initMap'
@@ -51,7 +55,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 #contact {
   min-height: 100%;
   display: grid;

@@ -1,7 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 function initMap () {
   let lat = 55.7067838
   let lng = 37.6888278
   let zoom = 17
+  // eslint-disable-next-line no-undef
   let windowWidth = $(window).width()
   if (windowWidth <= 576) {
     lat = 55.7067838
@@ -15,6 +17,7 @@ function initMap () {
   }
 
   // Styles a map in night mode.
+  // eslint-disable-next-line no-undef
   var map = new google.maps.Map(document.getElementById('map'), {
     center: { lat: lat, lng: lng },
     zoom: zoom,
@@ -224,21 +227,25 @@ function initMap () {
   })
 
   var image = '/images/index/s9/Placeholder_dark_grey.png'
+  // eslint-disable-next-line no-undef
   var beachMarker = new google.maps.Marker({
     position: { lat: 55.70784412551903, lng: 37.68859863281251 },
     map: map,
     icon: image
   })
   beachMarker.addListener('click', function () {
+    // eslint-disable-next-line no-undef
     $('#fullpage_welcome .section.s9 .full .r ul.info').addClass('open')
   })
 
   image = '/images/index/s9/Parking_green.png'
+  // eslint-disable-next-line no-undef
   beachMarker = new google.maps.Marker({
     map: map,
     icon: image
   })
 
+  // eslint-disable-next-line no-undef
   beachMarker = new google.maps.Marker({
     position: { lat: 55.77501158, lng: 37.6835796 },
     map: map,
@@ -246,6 +253,7 @@ function initMap () {
   })
 
   image = '/images/index/s9/Underground_grey.png'
+  // eslint-disable-next-line no-undef
   beachMarker = new google.maps.Marker({
     position: { lat: 55.7062038, lng: 37.6848278 },
     map: map,
@@ -255,6 +263,7 @@ function initMap () {
     { lat: 55.77827, lng: 37.67624395 },
     { lat: 55.777191, lng: 37.6793 }
   ]
+  // eslint-disable-next-line no-undef
   var flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
     geodesic: true,
@@ -274,6 +283,7 @@ function initMap () {
     { lat: 55.77503307, lng: 37.68294192 },
     { lat: 55.77530839, lng: 37.68359504 }
   ]
+  // eslint-disable-next-line no-undef
   flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
     geodesic: true,

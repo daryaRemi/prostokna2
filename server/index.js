@@ -1,5 +1,5 @@
 import express from 'express'
-import { Nuxt, Builder } from 'nuxt'
+import { Nuxt } from 'nuxt'
 
 import api from './api'
 

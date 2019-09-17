@@ -26,16 +26,14 @@ module.exports = {
       { src: '/js/map.js' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
   ** Global CSS
   */
   css: [
-    '~/assets/css/main.css',
-    '~/node_modules/bootstrap/dist/css/bootstrap.css'
+    '~/assets/css/main.css'
   ],
   /*
   ** Add proxy
@@ -57,7 +55,7 @@ module.exports = {
     /*
     ** Run ESLINT on save
     */
-    extend(config, ctx) {
+    extend (config, ctx) {
       if (ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
